@@ -5,17 +5,24 @@
 	<title>Project-DatingWebsite </title>
 <style>
 	fieldset {background-color: #FAFAD0;
-		border-color: #FAF634;
-		margin: 10px;
-		align-items: center;
+		width:;
+		
+		align-items: center; border: 10px solid #FAF634;
 
 
        	}
     input { align-items: center;
     }
-    label.min {background-color: #BE0C02; color: white; width: auto;
+    label { display: inline-block;
+           width:180px;
+           text-align: right; top;
+
+     }
+    label.min {background-color: #BE0C02; color: white; width: 50px; text-align: center;
     }
-     label.max {background-color: #1A0193; color: white; width: auto;}
+     label.max {background-color: #1A0193; color: white; width: 50px;
+     	text-align: center;}
+     	
 label:hover { font-size: 150%;
 	font-weight: 600;
     color: grey;}
@@ -48,7 +55,7 @@ document.getElementById("image").src="/ChooseFile.JPG";
      <label for="Name">Name:</label>
      <input type="text" name="lastname" placeholder="Your Name Here" >
      <br>
-     <label>Gender:</label>
+     <label >Gender:</label>
      <input type="radio" name="gender" value="male">male
      <input type="radio" name="gender" value="female">female
      <br>
@@ -73,7 +80,7 @@ document.getElementById("image").src="/ChooseFile.JPG";
 </fieldset>
 <fieldset><legend>Your Indicators</legend>
       <label>Height:</label> <label class="min">Short</label>
-      <input type="range" name="Height" step="5" min="Short" max="Tall" > <span class="max"> Tall</span>
+      <input type="range" name="Height" step="5" min="Short" max="Tall" > <label class="max">Tall</label>
       <br>
       <label>Salary:</label> <label class="min">Poor</label>      <input type="range" name="Salary" min="Poor" max="Rich" step="5" > <label class="max">Rich</label>
 
@@ -93,7 +100,7 @@ document.getElementById("image").src="/ChooseFile.JPG";
     <label>Address:</label>
     <input type="text" name="Address">
     <br>
-    <label>Method to contact you</label>
+    <label >Method to contact you</label>
     <input type="checkbox" name="method" value="Email">Email
     <input type="checkbox" name="method" value="Whatsapp">Whatsapp
     <input type="checkbox" name="method" value="In-app chat">In-app chat
