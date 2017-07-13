@@ -7,7 +7,7 @@ angular.module('msgApp', [])
 // myController.$inject= ['$scope'];
 function msgController ($scope) {
 $scope.liststring=" ";
-$scope.msg="";
+// $scope.msg="";
 
 $scope.final= function () {
   var separator = ","
