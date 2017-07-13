@@ -43,8 +43,11 @@ var found= [];
     }
 
     ctrl.blank = function () {
-      return MenuSearchService.blank();
+    if (ctrl.found.length === 0) {
+      ctrl.msg = "nothing found!";
+      return ctrl.msg;
     }
+  };
   }
 
   MenuSearchService.$inject = ['$http'];
@@ -78,12 +81,12 @@ var found= [];
       return service.found;
     }
 
-    service.blank = function () {
-      if (service.found.length ==0) {
-        service.errorMsg = "nothing found";
-        return service.errorMsg;
-      }
-    }
+    // service.blank = function () {
+    //   if (service.found.length === 0) {
+    //     service.errorMsg = "nothing found";
+    //     return service.errorMsg;
+    //   }
+    // }
 
 
   }
