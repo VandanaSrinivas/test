@@ -2,10 +2,15 @@
 	<ol>
 		<ul ng-repeat='item in found'>
 		<br>
+		<br>
+		<br>
 			Name: {{item.name}} <br>
-			Short Name: {{item.short_name}} <br>
 			Description: {{item.description}} <br>
-			<button ng-click='onRemove({index: $index})'>Don't want this one!</button>
+			<button
+			class="btn btn-primary"
+			ng-click="onRemove({index: $index})"
+			ng-click="blank()">Don't want this one!</button>
 		</ul>
 	</ol>
+	<span ng-if='errorMsg'>{{errorMsg}}</span>
 </div>
