@@ -27,7 +27,7 @@ angular.module('MenuApp')
     .state('itemstate', {
        url: '/item-state/{short_name}',
        templateUrl: 'src/templates/items.html',
-       controller: 'itemsController as itemctrl',
+       controller: 'itemsController as itemsctrl',
        resolve: {
         items: ['$stateParams','MenuDataService',
           function ($stateParams, MenuDataService) {
