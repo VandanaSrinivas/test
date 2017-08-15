@@ -1,0 +1,25 @@
+<!-- <ul>
+  <li ng-repeat= "category in $ctrl.categories">
+
+{{category.name}}
+
+  </li>
+</ul> -->
+<div class="container container-fluid" >
+
+   <div id="home-titles" class="row">
+    <ul>
+      <li ng-repeat= "category in $ctrl.categories"
+      class="col-sm-4 col-lg-2 col-md-4 col-xs-6 menu-img categories">
+
+
+      <div class="imagediv">
+        <a ui-sref="itemstate({name: category.name})"><img ng-src="css/images/{{category.name}}.jpg">
+
+          <span>{{category.name}}</span>
+      </img> </a>
+    </div>
+  </li>
+    </ul>
+    </div>
+    </div>

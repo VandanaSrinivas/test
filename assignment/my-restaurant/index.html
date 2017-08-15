@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="RestaurantApp">
   <head>
     <meta charset="utf-8">
     <title>My Restaurant App</title>
@@ -32,7 +32,7 @@
         <div id="collapsable-nav" class="collapse navbar-collapse">
            <ul id="nav-list" class="nav navbar-nav navbar-right">
             <li>
-              <a href="menu-categories.html"> Menu</a>
+              <a href="index.html"> Home</a>
             </li>
             <li>
               <a href="#"> About</a>
@@ -49,66 +49,26 @@
       </div><!-- .container -->
     </nav><!-- #header-nav -->
   </header>
-<div class="container container-fluid">
 
-
-  <div id="home-titles" class="row" >
-    <div class="col-sm-4 col-lg-2 col-md-3 col-xs-6 menu-img" id="dosa">
-      <img src="css/images/dosa.jpg">
-      <a href="#"><div id="breakfast">
-          <span>Breakfast Menu</span>
-      </div></a>
+    <ui-view>
+      <div class="text-center initial-loading">
+        <h2>Loading Site...</h2>
       </div>
-      <div class="col-sm-4 col-lg-2 col-md-3 col-xs-6 menu-img">
-        <img src="css/images/snacks.jpg">
-        <a href="#"><div id="snacks">
-            <span>Snacks</span>
-        </div></a>
-      </div>
-      <div class="col-sm-4 col-lg-2 col-md-3 col-xs-6 menu-img">
-        <img src="css/images/sides.jpg">
-        <a href="#"><div id="sides">
-            <span>Sides</span>
-        </div></a>
-      </div>
-      <div class="col-sm-4 col-lg-2 col-md-3 col-xs-6 menu-img">
-        <img src="css/images/biryani.jpg">
-        <a href="#"><div id="biryani">
-            <span>Biryanis</span>
-        </div></a>
-      </div>
-      <div class="col-sm-4 col-lg-2 col-md-3 col-xs-6 menu-img">
-        <img src="css/images/table-food.jpg">
-        <a href="#"><div id="combo">
-            <span>Combo Menu</span>
-        </div></a>
-      </div>
-      <div class="col-sm-4 col-lg-2 col-md-3 col-xs-6 menu-img">
-        <img src="css/images/dessert.jpg">
-        <a href="#"><div id="dessert">
-            <span>Desserts</span>
-        </div></a>
-      </div>
-    </div>
-  </div>
+    </ui-view>
 
+<!-- libraries -->
+  <script type="text/javascript" src="lib/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/angular.min.js"></script>
+  <script type="text/javascript" src="lib/angular-ui-router.min.js"></script>
 
-<!-- <div class="container" id="tiffin">
-  <img src="css/images/dosa.jpg" class="rounded float-left">
+  <!-- modules -->
+  <script type="text/javascript" src="js/module.js"></script>
 
-</div>
-<div class="container menu-img" id="snacks">
-
-</div>
-<div class="container menu-img" id="biryani">
-
-</div>
-<div class="container menu-img" id="sides">
-
-</div>
-<div class="container menu-img" id="dessert">
-
-</div> -->
+  <!-- artifacts -->
+  <script type="text/javascript" src="js/routes.js"></script>
+  <script type="text/javascript" src="js/menuitems.js"></script>
+  <script type="text/javascript" src="js/categories.js"></script>
+  <script type="text/javascript" src="js/items.js"></script>
 
   </body>
 </html>
